@@ -1,7 +1,7 @@
 body,
 html {
  width:100%;
- height:100%
+ height:100%;
 }
 
 body {
@@ -10,7 +10,7 @@ body {
   background: #fafafa;
   color: #333333;
   margin-top: 5rem;
-  font-family:Roboto;
+  font-family: Roboto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,11 +26,11 @@ ul {
 }
 
 .site-header .navbar-nav .nav-link {
-  color: #cbd5db;
+  color: #ffffff;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+  color: #428bca;
 }
 
 .site-header .navbar-nav .nav-link.active {
@@ -67,7 +67,7 @@ a.article-title:hover {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
+  border-bottom: 1px solid #e3e3e3;
 }
 
 .article-metadata a:hover {
@@ -109,7 +109,7 @@ footer p {
 }
 
 footer a{
-  color:#777
+  color:#777;
 }
 
 footer a:hover {
