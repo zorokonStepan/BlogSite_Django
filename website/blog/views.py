@@ -12,7 +12,15 @@ class PostListView(LoginRequiredMixin, ListView):
     template_name = 'blog/home.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
-    paginate_by = 2
+    paginate_by = 3
+
+
+class PostListCategoryView(PostListView):
+    def get_queryset(self):
+        queryset = Post.objects.filter(category=self.kwargs['category'])
+        if queryset:
+            return queryset
+        return Post.objects.all()
 
 
 class UserPostListView(ListView):
@@ -32,7 +40,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['title', 'content']
+    fields = ['title', 'content', 'category']
 
     def form_valid(self, form):
         form.instance.author = self.request.user

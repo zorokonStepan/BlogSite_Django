@@ -37,6 +37,15 @@ ul {
   font-weight: 500;
 }
 
+ul.list-group li a {
+  color: #444444;
+}
+
+ul.list-group li a:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
@@ -108,7 +117,7 @@ footer p {
  font-size:12px;
 }
 
-footer a{
+footer a {
   color:#777;
 }
 
