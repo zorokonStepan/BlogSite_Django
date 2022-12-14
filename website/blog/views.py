@@ -17,13 +17,10 @@ class PostListView(LoginRequiredMixin, ListView):
 
 class PostListCategoryView(PostListView):
     def get_queryset(self):
-        queryset = Post.objects.filter(category=self.kwargs['category'])
-        if queryset:
-            return queryset
-        return Post.objects.all()
+        return Post.objects.filter(category=self.kwargs['category']).order_by('-date_posted')
 
 
-class UserPostListView(ListView):
+class UserPostListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'blog/user_posts.html'
     context_object_name = 'posts'
@@ -34,7 +31,7 @@ class UserPostListView(ListView):
         return Post.objects.filter(author=user).order_by('-date_posted')
 
 
-class PostDetailView(DetailView):
+class PostDetailView(LoginRequiredMixin, DetailView):
     model = Post
 
 
@@ -65,8 +62,6 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    # обеспечивают создание, редактирование и удаление записей только зарегистрированными
-    # пользователями; при этом редактировать и удалять посты могут лишь их авторы.
     model = Post
     success_url = '/'
 
