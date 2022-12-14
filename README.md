@@ -1,4 +1,4 @@
-<center>
+<div>
     <ul>Блог любителей Python в котором реализованы:
         <li>Регистрация</li>
         <li>Авторизация</li>
@@ -11,7 +11,7 @@
         <li>Возможность просмотра пользователем постов по категориям</li>
         <li>Возможность просмотра пользователем только своих постов по категориям</li>
     </ul>
-</center>
+</div>
 
 Регистрация:
 <p align="center">
@@ -20,15 +20,15 @@
 
 Авторизация:
 <p align="center">
-  <img src="https://github.com/zorokonStepan/NewsSite_Django/raw/main/img_git/in.png" width="450" title="in">
+  <img src="https://github.com/zorokonStepan/BlogSite_Django/raw/main/img_git/in.png" width="450" title="in">
 </p>
 
 Пагинация:
 <p align="center">
-  <img src="https://github.com/zorokonStepan/NewsSite_Django/raw/main/img_git/pagination.png" width="450" title="pagination">
+  <img src="https://github.com/zorokonStepan/BlogSite_Django/raw/main/img_git/pagination.png" width="450" title="pagination">
 </p>
 
 Страница личного профиля:
 <p align="center">
-  <img src="https://github.com/zorokonStepan/NewsSite_Django/raw/main/img_git/profile.png" width="450" title="profile">
+  <img src="https://github.com/zorokonStepan/BlogSite_Django/raw/main/img_git/profile.png" width="450" title="profile">
 </p>
